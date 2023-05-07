@@ -1,0 +1,14 @@
+.footer{
+    margin-top: 30px;
+    border-top: 2px solid rgb(72, 255, 0);
+    display: flex;
+}
+.fitdance{
+    width: 7VW;
+    height: 7VW;
+    border-radius: 50%;
+}
+.footer img{
+    display: inline-block;
+    margin: 20px auto;
+}
