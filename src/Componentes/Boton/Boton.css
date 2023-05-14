@@ -2,17 +2,19 @@
     background-color: black;
     color: aliceblue;
     border: 1px solid aliceblue;
-    padding: 0 30px;
+    padding: 10px 30px;
     border-radius: 5px;
     cursor: pointer;
-    transition: all .3s;
-    box-sizing: border-box;
+    transition: all .3s;    
     font-size: 18px;
     font-weight: 500;
+    margin: 10px;
+    box-sizing: border-box;
 }
 .boton:hover{
     border-color: rgb(72, 255, 0);
     color: rgb(72, 255, 0);
+    
 }
 .boton:active{
     background-color: rgb(72, 255, 0);

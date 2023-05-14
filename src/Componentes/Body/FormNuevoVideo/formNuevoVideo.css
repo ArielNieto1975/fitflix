@@ -1,0 +1,21 @@
+.ingrese{
+    margin: 50px auto ;
+    margin-top: 100px;
+    text-align: center;
+    color: aliceblue;
+    font-size: 2.5rem;
+}
+.newCat{
+    float: right;
+}
+.setColor{    
+    width: 90%;
+    height: 40px;
+    margin: 30px 0;
+}
+.colorTit {
+    width: 200px;
+    padding-right: 15px;
+    color: aliceblue;
+    font-size: 1.5rem;
+}

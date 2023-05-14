@@ -1,0 +1,14 @@
+.slider{
+    width: 91vw;
+    margin: 0 auto;
+}
+.slider h2{
+  font-size: 36px;
+  margin: 20px 0;
+  color: aliceblue;
+}
+
+.video iframe{
+  width: 439px;
+  height: 243px;
+}

@@ -2,7 +2,9 @@
     background-color: black;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px 50px; 
+    height: 70px;
 }
 .header img{
     width: 168.45px;

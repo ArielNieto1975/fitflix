@@ -1,5 +1,10 @@
 import "./Boton.css"
-const Boton = (props)=>{
-    return <button className="boton">{props.value}</button>
+import { useState } from "react"
+export const Boton = (props)=>{
+
+    return <button className="boton" onClick={props.cambiarMostrarNV}>{props.value}</button>
 }
-export default Boton
+export const Boton2 = (props)=>{
+
+    return <button className="boton" onClick={props.newCatOpen}>{props.value}</button>
+}

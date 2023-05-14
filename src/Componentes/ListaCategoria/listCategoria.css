@@ -1,0 +1,11 @@
+.label-tirulo{
+    color: aliceblue;
+    padding-right: 10px;
+    font-size: 1.8rem;
+}
+.select{
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: grey;
+    padding: 5px 10px;
+}
