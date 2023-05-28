@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
@@ -23,9 +24,15 @@ const CssTextField = styled(TextField)({
   });
 
 const CampoTexto = (props)=>{
+    const manejarCambio = (e)=>{
+       props.actualizarValor(e.target.value)
+    }
+
     return <Box >
         <CssTextField 
                 label={props.titulo} 
+                value = {props.valor}
+                onChange={manejarCambio}
                 id="custom-css-outlined-input"
                 fullWidth
                 margin= "normal"

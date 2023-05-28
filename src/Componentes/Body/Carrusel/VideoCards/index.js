@@ -1,10 +1,10 @@
-
-const VideoCards = ()=>{
-    return <>
-        <div className="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/V-HTqiLZArs" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+import "./videoCard.css"
+const VideoCards = (props)=>{
+    const {link, categoria} = props.datos
+    return <div className="video">
+            <iframe className="video" width="560" height="315" src={link} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen/>
         </div>
-    </>
+    
 }
 
 export default VideoCards
