@@ -90,6 +90,12 @@ const Body= (props)=>{
         }
     ])
 
+    const eliminarCategoria= (catColor)=>{
+        console.log("Eliminar Categoria", catColor)
+        const nuevasCategorias = categorias.filter((categoria)=> categoria.catColor !== catColor)
+        actualizarCategorias(nuevasCategorias)
+    }
+
     const registrarCategoria = (categoria)=>{
         actualizarCategorias([...categorias,categoria])
     }
@@ -117,6 +123,7 @@ const Body= (props)=>{
                     cambiarMostrarNV={props.cambiarMostrarNV}
                     registrarCategoria={registrarCategoria}
                     categorias={categorias}
+                    eliminarCategoria={eliminarCategoria}
                 /> : <></>}
             {/* <FormNewCategory/> */}
             

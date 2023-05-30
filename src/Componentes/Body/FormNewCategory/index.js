@@ -11,7 +11,8 @@ const FormNewCategory = (props)=>{
 
     const [col, setCol] = useState("#222222")
     
-    const {registrarCategoria, categorias} = props
+    const {registrarCategoria, categorias, eliminarCategoria} = props
+    
 
     const manejarCat = (e) => {
         e.preventDefault()
@@ -21,6 +22,10 @@ const FormNewCategory = (props)=>{
         }
         registrarCategoria(catAEnviar)
     }
+
+    // const manejarDelete = (e)=>{
+    //     eliminarCategoria()
+    // }
 
     return  <Container component= "section" maxWidth= "md" >
                 <form onSubmit={manejarCat}>
@@ -49,9 +54,9 @@ const FormNewCategory = (props)=>{
                 </form>
                 <section className="categoria_indice">
                     {
-                        categorias.map((category)=> <section className="item">
+                        categorias.map((category)=> <section className="item" key={category.catColor}>
                             <div className="i_item i_title" 
-                                key={category.catColor}                            
+                                                            
                                 >
                                 {category.categoria}
                             </div>
@@ -59,7 +64,7 @@ const FormNewCategory = (props)=>{
                                 {category.catColor}
                             </div>
                             <div className="i_item i_modify">Modificar</div>
-                            <div className="i_item i_delete">Eliminar</div>
+                            <div className="i_item i_delete" onClick={()=>eliminarCategoria(category.catColor)}>Eliminar</div>
                         </section>
                     )}
              
