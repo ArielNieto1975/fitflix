@@ -7,7 +7,7 @@ export default class CenterMode extends Component {
     
     render() {
         const {categoria, videos } = this.props;
-        console.log(videos.length > 0)
+        // console.log(videos.length > 0)
         const settings = {
           className: "center",
           centerMode: true,
@@ -35,7 +35,7 @@ export default class CenterMode extends Component {
                             </Slider>
                         </div>
                     
-                    }
+                    } 
                 </div>
         );
     }

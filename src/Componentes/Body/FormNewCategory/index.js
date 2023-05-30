@@ -1,5 +1,6 @@
 import { useState } from "react"
 import "../FormNuevoVideo/formNuevoVideo.css"
+import "./formNewCategory.css"
 import CampoTexto from "../../CampoTexto"
 import {Boton} from "../../Boton"
 import { Container } from '@mui/system';
@@ -7,18 +8,19 @@ import { Container } from '@mui/system';
 const FormNewCategory = (props)=>{
     const [categoria, setcategoria] = useState("")
     const [catColor, setCatColor] = useState("")
+
+    const [col, setCol] = useState("#222222")
     
-    const {registrarCategoria} = props
+    const {registrarCategoria, categorias} = props
 
     const manejarCat = (e) => {
         e.preventDefault()
         let catAEnviar={
             categoria,
-            catColor
+            catColor: col
         }
         registrarCategoria(catAEnviar)
     }
-
 
     return  <Container component= "section" maxWidth= "md" >
                 <form onSubmit={manejarCat}>
@@ -35,11 +37,33 @@ const FormNewCategory = (props)=>{
                         type="color" 
                         valor={catColor}
                         actualizarValor={setCatColor}
+                        onChange={(e)=>{
+                            console.log(e.target.value)
+                            setCol(e.target.value)
+                        }}
+                        value={col}
                         />
                     <Boton value="Limpiar"/>
                     <Boton value="Guardar" onClick={manejarCat} />                
-                    {/* <Boton value="Guardar"  cambiarMostrarNV={props.cambiarMostrarNV}/>                 */}
+                   
                 </form>
+                <section className="categoria_indice">
+                    {
+                        categorias.map((category)=> <section className="item">
+                            <div className="i_item i_title" 
+                                key={category.catColor}                            
+                                >
+                                {category.categoria}
+                            </div>
+                            <div  className="i_item i_color">
+                                {category.catColor}
+                            </div>
+                            <div className="i_item i_modify">Modificar</div>
+                            <div className="i_item i_delete">Eliminar</div>
+                        </section>
+                    )}
+             
+                </section>
                 
              </Container>
 }

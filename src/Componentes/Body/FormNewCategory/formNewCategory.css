@@ -1,0 +1,32 @@
+.categoria_indice{
+    margin-top: 50px;
+    width: 100%;
+}
+.item{
+    display: flex;
+    color: aliceblue;           
+    justify-content: center;
+}
+.i_item{
+    padding: 10px 0;
+    font-size: 1.3rem;
+    text-align: center;
+    border: 1px solid aliceblue;
+}
+.i_title{
+    width: 30%;
+}
+.i_color{
+    width: 30%;
+}
+.i_modify{
+    width: 20%;
+    cursor: pointer;
+}
+.i_delete{
+    width: 20%;
+    cursor: pointer;
+}
+.i_modify:hover, .i_delete:hover{
+    color: cornflowerblue;
+}

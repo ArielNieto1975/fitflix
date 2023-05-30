@@ -87,10 +87,6 @@ const Body= (props)=>{
         {
             categoria:"Pop",
             catColor:"yellow"
-        },
-        {
-            categoria:"Agro-Pop",
-            catColor:"pink"
         }
     ])
 
@@ -120,6 +116,7 @@ const Body= (props)=>{
             { props.mostrarNewCat? <FormNewCategory 
                     cambiarMostrarNV={props.cambiarMostrarNV}
                     registrarCategoria={registrarCategoria}
+                    categorias={categorias}
                 /> : <></>}
             {/* <FormNewCategory/> */}
             
