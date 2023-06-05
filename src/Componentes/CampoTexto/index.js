@@ -29,6 +29,7 @@ const CampoTexto = (props)=>{
 
     return <Box >
         <CssTextField 
+                required
                 label={props.titulo} 
                 value = {props.valor}
                 onChange={manejarCambio}

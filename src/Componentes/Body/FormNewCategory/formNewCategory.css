@@ -15,6 +15,7 @@
 }
 .i_title{
     width: 30%;
+    text-transform: uppercase;
 }
 .i_color{
     width: 30%;
@@ -22,10 +23,12 @@
 .i_modify{
     width: 20%;
     cursor: pointer;
+    background-color: rgba(6, 250, 6, 0.2);
 }
 .i_delete{
     width: 20%;
     cursor: pointer;
+    background-color: rgba(165, 42, 42, 0.5);
 }
 .i_modify:hover, .i_delete:hover{
     color: cornflowerblue;

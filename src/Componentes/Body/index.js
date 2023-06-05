@@ -72,6 +72,7 @@ const Body= (props)=>{
 
     const registrarVideo = (video)=>{
         console.log("nuevovideo", video)
+        
         actualizarVideos([...videos, video])
     }
 
@@ -102,30 +103,32 @@ const Body= (props)=>{
 
     return <section className="body">
             { props.mostrarNewVid || props.mostrarNewCat?  <></> : <Banner />}
+
             { 
                 props.mostrarNewVid || props.mostrarNewCat? <></> :
                 <Carrusel 
                     categorias={categorias}
-                    // categorias={categorias.map((categoria)=>categoria)}
                     videos={videos}
                     mostrarNewVid={props.mostrarNewVid} 
                     mostrarNewCat={props.mostrarNewCat}
                 />
-}
+            }
             { 
                 props.mostrarNewVid? <FormNuevoVideo 
                     newCatOpen={props.newCatOpen} 
                     categorias={categorias}
                     registrarVideo={registrarVideo}
                 /> : <></>
-                }
-            { props.mostrarNewCat? <FormNewCategory 
+            }
+            { 
+                props.mostrarNewCat? <FormNewCategory 
                     cambiarMostrarNV={props.cambiarMostrarNV}
                     registrarCategoria={registrarCategoria}
                     categorias={categorias}
                     eliminarCategoria={eliminarCategoria}
-                /> : <></>}
-            {/* <FormNewCategory/> */}
+                /> : <></>
+            }
+            
             
         </section>
 }
