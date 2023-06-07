@@ -1,13 +1,12 @@
 import "./Slider.css"
-import React, { Component } from "react";
+import React, { Component, lazy, Suspense } from "react";
 import Slider from "react-slick";
-import VideoCards from "../VideoCards";
-
+// import VideoCards from "../VideoCards";
+const LazyYouTube = lazy(() => import('../VideoCards'));
 export default class CenterMode extends Component {
     
     render() {
         const {categoria, videos } = this.props;
-        // console.log(videos.length > 0)
         const settings = {
           className: "center",
           centerMode: true,
@@ -25,10 +24,15 @@ export default class CenterMode extends Component {
                             
                             <Slider {...settings } >
                                 {
-                                    videos.map((video)=> <VideoCards 
-                                                            datos= {video} 
-                                                            key={video.link} 
-                                                         />
+                                    videos.map((video)=> <Suspense fallback={<div>Loading...</div>}>
+                                                            <LazyYouTube  datos= {video} key={video.link} />
+                                                        </Suspense>
+                                    
+                                    
+                                                        // <VideoCards 
+                                                        //     datos= {video} 
+                                                        //     key={video.link} 
+                                                        //  />
                                     )
                                 }
 

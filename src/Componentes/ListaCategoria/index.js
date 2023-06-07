@@ -2,11 +2,7 @@
 import "./listCategoria.css"
 
 const ListaCategoria = (props)=> {
-    // const categorias= [
-    //     "Reggaeton",
-    //     "Hip-Hop",
-    //     "Pop"
-    // ]
+
     const manejarCambio = (e)=>{
         props.actualizarCategoria(e.target.value)
     }
