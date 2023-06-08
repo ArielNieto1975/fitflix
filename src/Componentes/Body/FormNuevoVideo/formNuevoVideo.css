@@ -19,3 +19,24 @@
     color: aliceblue;
     font-size: 1.5rem;
 }
+
+@media (max-width:950px){
+    .ingrese{
+        margin: 20px auto;
+        /* margin-top: 50px; */
+        font-size: 2rem;
+    }
+    .colorTit{
+        font-size: 1.3rem;
+    }
+}
+@media (max-width:741px){
+    .setColor{    
+       margin: 15px 0;
+    }
+}
+@media (max-width:395px){
+    .newCat{
+        float: left;
+    }
+}

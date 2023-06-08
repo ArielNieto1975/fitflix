@@ -1,4 +1,6 @@
-.video iframe{
-    width: 439px;
-    height: 243px;
+.video{
+    /* width: 439px;
+    height: 243px; */
+    max-width: 100%;
+    min-width: 300px; 
   }

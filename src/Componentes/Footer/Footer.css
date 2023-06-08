@@ -4,11 +4,18 @@
     display: flex;
 }
 .fitdance{
-    width: 7VW;
-    height: 7VW;
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
 }
 .footer img{
-    display: inline-block;
     margin: 20px auto;
+}
+@media (max-width:450px){
+    .fitdance{
+        display: none;
+    }
+    .fitflix{
+        height: 50px;
+    }
 }

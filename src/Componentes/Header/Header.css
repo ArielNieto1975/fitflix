@@ -10,3 +10,10 @@
     width: 168.45px;
     height: 40px;
 }
+
+@media (max-width:500px){
+    .header{
+        flex-direction: column;
+        height: 100px;
+    }
+}

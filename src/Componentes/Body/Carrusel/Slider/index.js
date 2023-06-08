@@ -1,5 +1,5 @@
-import "./Slider.css"
 import React, { Component, lazy, Suspense } from "react";
+import "./Slider.css"
 import Slider from "react-slick";
 // import VideoCards from "../VideoCards";
 const LazyYouTube = lazy(() => import('../VideoCards'));
@@ -12,8 +12,28 @@ export default class CenterMode extends Component {
           centerMode: true,
           infinite: true,
           centerPadding: "60px",
-          slidesToShow: 3,
-          speed: 500
+          slidesToShow: 4,
+          speed: 500,
+          responsive: [
+            {
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 3,
+              },
+            },
+            {
+              breakpoint: 900,
+              settings: {
+                slidesToShow: 2,
+              },
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+              },
+            },
+          ],
         };
         
         return (
@@ -25,9 +45,8 @@ export default class CenterMode extends Component {
                             <Slider {...settings } >
                                 {
                                     videos.map((video)=> <Suspense fallback={<div>Loading...</div>}>
-                                                            <LazyYouTube  datos= {video} key={video.link} />
-                                                        </Suspense>
-                                    
+                                                            <LazyYouTube  datos= {video} key={video.link} width="100%"/>
+                                                        </Suspense>                                   
                                     
                                                         // <VideoCards 
                                                         //     datos= {video} 

@@ -9,3 +9,9 @@
   border-bottom: 4px solid;
 }
 
+@media (max-width:800px){
+  .slider h2{
+    font-size: 28px;
+  }
+}
+

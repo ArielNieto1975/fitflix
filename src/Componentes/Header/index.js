@@ -1,5 +1,4 @@
 import "./Header.css"
-import { useState } from "react"
 import {Boton} from "../Boton"
 
 const Header = (props)=>{
@@ -8,7 +7,7 @@ const Header = (props)=>{
             <img src="img/logo-.png" alt="Logo Fitflix" onClick={props.mostrarPrincipal}/>
             {/* <Boton value="Nuevo Video" cambiarMostrarNV={props.cambiarMostrarNV}/> */}
             { props.mostrarNewVid || props.mostrarNewCat? <></> : <Boton value="Nuevo Video" cambiarMostrarNV={props.cambiarMostrarNV}/> }
-            { props.Principal? <Boton value="Nuevo Video" cambiarMostrarNV={props.cambiarMostrarNV}/>  : <></> }
+            { props.Principal? <Boton className="boton_princ" value="Nuevo Video" cambiarMostrarNV={props.cambiarMostrarNV}/>  : <></> }
         </div>
 }
 export default Header

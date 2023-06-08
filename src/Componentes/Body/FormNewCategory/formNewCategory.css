@@ -33,3 +33,8 @@
 .i_modify:hover, .i_delete:hover{
     color: cornflowerblue;
 }
+@media (max-width:550px){
+    .i_item{
+        font-size: .8rem;
+    }
+}
