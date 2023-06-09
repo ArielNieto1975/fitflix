@@ -13,5 +13,9 @@
   .slider h2{
     font-size: 28px;
   }
+  .slider{
+    width: 85vw;
+    
+}
 }
 
