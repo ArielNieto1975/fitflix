@@ -80,22 +80,25 @@ const Body= (props)=>{
             imagen:"https://img.youtube.com/vi/GUmzaJNZrgY/sddefault.jpg",
             link:"https://www.youtube.com/embed/GUmzaJNZrgY"
         },
+
+
+        
         {
             categoria:"Urban-Pop",
             titulo:"Can't Stop The Feeling - Justin Timberlake",
-            imagen:"",
+            imagen:"https://img.youtube.com/vi/GUmzaJNZrgY/sddefault.jpg",
             link:"https://www.youtube.com/embed/c72xgq4QeUY"
         },
         {
             categoria:"Pop",
             titulo:"Llegaste tu - CNCO, Prince Royce",
-            imagen:"",
+            imagen:"https://img.youtube.com/vi/GUmzaJNZrgY/sddefault.jpg",
             link:"https://www.youtube.com/embed/C8YI14_x9n8"
         },
         {
             categoria:"Reggaeton",
             titulo:"Reggaetón Lento - CNCO",
-            imagen:"",
+            imagen:"https://img.youtube.com/vi/GUmzaJNZrgY/sddefault.jpg",
             link:"https://www.youtube.com/embed/rdoo8steDCE"
         },
     ])
