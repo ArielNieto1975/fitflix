@@ -1,7 +1,7 @@
 import React, { Component, lazy, Suspense } from "react";
 import "./Slider.css"
 import Slider from "react-slick";
-// import VideoCards from "../VideoCards";
+
 const LazyYouTube = lazy(() => import('../VideoCards'));
 export default class CenterMode extends Component {
     
@@ -47,11 +47,6 @@ export default class CenterMode extends Component {
                                     videos.map((video)=> <Suspense fallback={<div>Loading...</div>}>
                                                             <LazyYouTube  datos= {video} key={video.link} width="100%"/>
                                                         </Suspense>                                   
-                                    
-                                                        // <VideoCards 
-                                                        //     datos= {video} 
-                                                        //     key={video.link} 
-                                                        //  />
                                     )
                                 }
 

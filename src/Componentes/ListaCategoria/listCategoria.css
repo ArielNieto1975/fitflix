@@ -9,3 +9,8 @@
     color: grey;
     padding: 5px 10px;
 }
+@media (max-width:425px){
+    .label-tirulo{
+        display: none;
+    }
+}
