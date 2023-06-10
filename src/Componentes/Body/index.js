@@ -93,6 +93,12 @@ const Body= (props)=>{
             link:"https://www.youtube.com/embed/C8YI14_x9n8"
         },
         {
+            categoria:"Pop",
+            titulo:"Baila Conmigo - Dayvi, Victor Cárdenas ft. Kelly Ruiz",
+            imagen:"https://img.youtube.com/vi/WFjNFOMWDPM/sddefault.jpg",
+            link:"https://www.youtube.com/embed/WFjNFOMWDPM"
+        },
+        {
             categoria:"Reggaeton",
             titulo:"Reggaetón Lento - CNCO",
             imagen:"https://img.youtube.com/vi/rdoo8steDCE/sddefault.jpg",

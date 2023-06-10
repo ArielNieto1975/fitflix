@@ -8,6 +8,7 @@ import { Container } from '@mui/system';
 
 const FormNuevoVideo = (props) => {
   const [titulo, setTitulo] = useState("")
+  const [imagen, setImagen] = useState("")
   const [link, setLink] = useState("")
   const [categoria, setCategoria] = useState("")
 
@@ -15,9 +16,10 @@ const FormNuevoVideo = (props) => {
 
   const manejarEnvio = (e) => {
     e.preventDefault()
-    let datosAEnviar = { titulo, link, categoria }
+    let datosAEnviar = { titulo, link, categoria, imagen }
     registrarVideo(datosAEnviar)
     setTitulo("")
+    setImagen("")
     setLink("")
     setCategoria("")
   }
@@ -28,6 +30,7 @@ const FormNuevoVideo = (props) => {
         <h2 className="ingrese">Ingrese un Nuevo Video</h2>
         <ListaCategoria valor={categoria} actualizarCategoria={setCategoria} categorias={props.categorias} />
         <CampoTexto titulo="Titulo" placeHolder="Ingrese el titulo del Tema" valor={titulo} actualizarValor={setTitulo} />
+        <CampoTexto titulo="Imagen" placeHolder="Ingrese imagen del Tema" valor={imagen} actualizarValor={setImagen} />
         <CampoTexto titulo="Link" placeHolder="Ingrese la URL del video" valor={link} actualizarValor={setLink} />
         <Boton value="Enviar" name="guardar" />
         <div className="newCat"><Boton2 value="Agregar Categoría" newCatOpen={props.newCatOpen} /></div>
