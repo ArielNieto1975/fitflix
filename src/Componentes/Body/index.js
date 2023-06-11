@@ -105,67 +105,79 @@ const Body= (props)=>{
             link:"https://www.youtube.com/embed/rdoo8steDCE"
         },
     ])
+const registrarVideo = (video) => {
+    console.log("nuevovideo", video);
 
-    const registrarVideo = (video)=>{
-        console.log("nuevovideo", video)
-        
-        actualizarVideos([...videos, video])
-    }
+    actualizarVideos([...videos, video]);
+  };
 
-    const [categorias, actualizarCategorias]= useState([
-        {
-            categoria:"Reggaeton",
-            catColor:"#48ff00"
-        },
-        {
-            categoria:"Urban-Pop",
-            catColor:"#3adff5"
-        },
-        {
-            categoria:"Pop",
-            catColor:"yellow"
-        }
-    ])
+  const [categorias, actualizarCategorias] = useState([
+    {
+      categoria: "Reggaeton",
+      catColor: "#48ff00",
+    },
+    {
+      categoria: "Urban-Pop",
+      catColor: "#3adff5",
+    },
+    {
+      categoria: "Pop",
+      catColor: "yellow",
+    },
+  ]);
 
-    const eliminarCategoria= (catColor)=>{
-        console.log("Eliminar Categoria", catColor)
-        const nuevasCategorias = categorias.filter((categoria)=> categoria.catColor !== catColor)
-        actualizarCategorias(nuevasCategorias)
-    }
+  const eliminarCategoria = (catColor) => {
+    console.log("Eliminar Categoria", catColor);
+    const nuevasCategorias = categorias.filter(
+      (categoria) => categoria.catColor !== catColor
+    );
+    actualizarCategorias(nuevasCategorias);
+  };
 
-    const registrarCategoria = (categoria)=>{
-        actualizarCategorias([...categorias,categoria])
-    }
+  const registrarCategoria = (categoria) => {
+    actualizarCategorias([...categorias, categoria]);
+  };
 
-    return <section className="body">
-            { props.mostrarNewVid || props.mostrarNewCat?  <></> : <Banner />}
+  return (
+    <section className="body">
+      {props.mostrarNewVid || props.mostrarNewCat ? (
+        <></>
+      ) : (
+        <Banner />
+      )}
+      {props.mostrarNewVid || props.mostrarNewCat ? (
+        <></>
+      ) : (
+        <Carrusel
+          categorias={categorias}
+          videos={videos}
+          mostrarNewVid={props.mostrarNewVid}
+          mostrarNewCat={props.mostrarNewCat}
+        />
+      )}
+      {props.mostrarNewVid ? (
+        <FormNuevoVideo
+          newCatOpen={props.newCatOpen}
+          categorias={categorias}
+          registrarVideo={registrarVideo}
+          videos={videos}
+          actualizarVideos={actualizarVideos}
+        />
+      ) : (
+        <></>
+      )}
+      {props.mostrarNewCat ? (
+        <FormNewCategory
+          cambiarMostrarNV={props.cambiarMostrarNV}
+          registrarCategoria={registrarCategoria}
+          categorias={categorias}
+          eliminarCategoria={eliminarCategoria}
+        />
+      ) : (
+        <></>
+      )}
+    </section>
+  );
+};
 
-            { 
-                props.mostrarNewVid || props.mostrarNewCat? <></> :
-                <Carrusel 
-                    categorias={categorias}
-                    videos={videos}
-                    mostrarNewVid={props.mostrarNewVid} 
-                    mostrarNewCat={props.mostrarNewCat}
-                />
-            }
-            { 
-                props.mostrarNewVid? <FormNuevoVideo 
-                    newCatOpen={props.newCatOpen} 
-                    categorias={categorias}
-                    registrarVideo={registrarVideo}
-                /> : <></>
-            }
-            { 
-                props.mostrarNewCat? <FormNewCategory 
-                    cambiarMostrarNV={props.cambiarMostrarNV}
-                    registrarCategoria={registrarCategoria}
-                    categorias={categorias}
-                    eliminarCategoria={eliminarCategoria}
-                /> : <></>
-            }
-            
-            
-        </section>
-}
-export default Body
+export default Body;

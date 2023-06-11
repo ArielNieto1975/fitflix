@@ -19,6 +19,26 @@
     color: aliceblue;
     font-size: 1.5rem;
 }
+.abm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+}
+.vid-item {
+    width: 250px;
+
+}
+.icon {
+    /* background-color: aliceblue; */
+    display: inline-block;
+    position: absolute;
+    margin: 2px 0 0 10px;
+    cursor: pointer;
+    color: #f6f6f6;
+}
+
 
 @media (max-width:950px){
     .ingrese{
@@ -38,5 +58,9 @@
 @media (max-width:395px){
     .newCat{
         float: left;
+    }
+    .video_cat h2{
+        margin-top: 50px;
+        
     }
 }
