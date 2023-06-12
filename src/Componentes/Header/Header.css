@@ -9,6 +9,7 @@
 .header img{
     width: 168.45px;
     height: 40px;
+    cursor: pointer;
 }
 
 @media (max-width:500px){
